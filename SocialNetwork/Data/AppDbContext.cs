@@ -35,13 +35,13 @@ namespace SocialNetwork.Data
                 .HasOne(f => f.UserOne)
                 .WithMany()
                 .HasForeignKey(f => f.UserOneId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Friendship>()
                 .HasOne(f => f.UserTwo)
                 .WithMany()
                 .HasForeignKey(f => f.UserTwoId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
 
 
@@ -49,7 +49,7 @@ namespace SocialNetwork.Data
                 .HasOne(c => c.User)
                 .WithMany()
                 .HasForeignKey(c => c.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<ChatUser>()
                 .HasOne(c => c.Chat)
@@ -64,14 +64,12 @@ namespace SocialNetwork.Data
                 v => (Role)Enum.Parse(typeof(Role), v));
 
 
-            modelBuilder.Entity<ChatMessage>()
-                .HasKey(c => new { c.ChatId, c.MessageId });
 
             modelBuilder.Entity<ChatMessage>()
                 .HasOne(c => c.Message)
                 .WithMany()
                 .HasForeignKey(c => c.MessageId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<ChatMessage>()
                 .HasOne(c => c.Chat)

@@ -12,7 +12,7 @@ using SocialNetwork.Data;
 namespace SocialNetwork.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241228192154_InitialMigration")]
+    [Migration("20241228193749_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -57,16 +57,21 @@ namespace SocialNetwork.Migrations
 
             modelBuilder.Entity("SocialNetwork.Models.ChatMessage", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<int>("ChatId")
                         .HasColumnType("int");
 
                     b.Property<int>("MessageId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.HasKey("Id");
 
-                    b.HasKey("ChatId", "MessageId");
+                    b.HasIndex("ChatId");
 
                     b.HasIndex("MessageId");
 
@@ -206,7 +211,7 @@ namespace SocialNetwork.Migrations
                     b.HasOne("SocialNetwork.Models.Message", "Message")
                         .WithMany()
                         .HasForeignKey("MessageId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("Chat");
@@ -225,7 +230,7 @@ namespace SocialNetwork.Migrations
                     b.HasOne("SocialNetwork.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("Chat");
@@ -238,13 +243,13 @@ namespace SocialNetwork.Migrations
                     b.HasOne("SocialNetwork.Models.User", "UserOne")
                         .WithMany()
                         .HasForeignKey("UserOneId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.HasOne("SocialNetwork.Models.User", "UserTwo")
                         .WithMany()
                         .HasForeignKey("UserTwoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("UserOne");

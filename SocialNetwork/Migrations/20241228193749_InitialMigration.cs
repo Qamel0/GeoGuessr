@@ -70,7 +70,7 @@ namespace SocialNetwork.Migrations
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,13 +92,13 @@ namespace SocialNetwork.Migrations
                         column: x => x.UserOneId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Friendships_Users_UserTwoId",
                         column: x => x.UserTwoId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -128,13 +128,14 @@ namespace SocialNetwork.Migrations
                 name: "ChatMessages",
                 columns: table => new
                 {
-                    ChatId = table.Column<int>(type: "int", nullable: false),
-                    MessageId = table.Column<int>(type: "int", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ChatId = table.Column<int>(type: "int", nullable: false),
+                    MessageId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChatMessages", x => new { x.ChatId, x.MessageId });
+                    table.PrimaryKey("PK_ChatMessages", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ChatMessages_Chats_ChatId",
                         column: x => x.ChatId,
@@ -146,8 +147,13 @@ namespace SocialNetwork.Migrations
                         column: x => x.MessageId,
                         principalTable: "Messages",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ChatMessages_ChatId",
+                table: "ChatMessages",
+                column: "ChatId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ChatMessages_MessageId",
