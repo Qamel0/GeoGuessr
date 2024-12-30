@@ -1,1 +1,30 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyApp</title>
+    <link rel="stylesheet" href="~/css/_Layout.css"/>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <h1 class="sitetitle">SocialNetwork</h1>
+    </header>
+    <main>
+        <a class="sitetitle">Привет1</a>
+        <a class="sitetitle">Привет2</a>
+        <a class="sitetitle">Привет3</a>
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="contacts">
+        <p>Телефон: 124432543</p>
+        <p>Почта: feadsfwe@asd.cas</p>
+        <p>Адрес: Улица Гор</p>
+        <p>Мой сайт. Все права защищены</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

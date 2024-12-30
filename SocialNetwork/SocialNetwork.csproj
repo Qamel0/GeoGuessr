@@ -16,10 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Enums\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 </Project>
