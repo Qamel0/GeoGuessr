@@ -1,4 +1,4 @@
-﻿namespace SocialNetwork.Models
+﻿namespace GeoGuessr.Models
 {
     public class User
     {

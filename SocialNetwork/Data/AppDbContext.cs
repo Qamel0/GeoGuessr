@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SocialNetwork.Models;
+using GeoGuessr.Models;
 
-namespace SocialNetwork.Data
+namespace GeoGuessr.Data
 {
     public class AppDbContext : DbContext
     {

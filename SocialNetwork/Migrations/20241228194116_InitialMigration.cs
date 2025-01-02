@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace SocialNetwork.Migrations
+namespace GeoGuessr.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

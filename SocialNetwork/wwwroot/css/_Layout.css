@@ -8,6 +8,10 @@ html, body {
     height: 100%;
 }
 
+header {
+    background-color: #181818
+}
+
 body {
     display: flex;
     flex-direction: column-reverse;
@@ -24,11 +28,18 @@ main {
     padding: 20px;
 }
 
-footer{
-    background: #000000;
+footer {
+    background-color: #181818;
     color: white
 }
 
-footer .contacts p {
+footer .info p {
     margin: 5px 0;
+}
+
+#logo {
+    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+    color: white;
 }

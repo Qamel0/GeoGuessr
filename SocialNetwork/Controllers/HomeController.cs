@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SocialNetwork.Controllers
+namespace GeoGuessr.Controllers
 {
     public class HomeController : Controller
     {

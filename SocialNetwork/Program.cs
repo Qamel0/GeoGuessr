@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using SocialNetwork.Data;
+using GeoGuessr.Data;
 
-namespace SocialNetwork
+namespace GeoGuessr
 {
     public class Program
     {

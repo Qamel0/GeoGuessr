@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork", "SocialNetwork\SocialNetwork.csproj", "{6F0D12B7-27C6-4BB5-8CE6-BE33217DBAE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoGuessr", "SocialNetwork\GeoGuessr.csproj", "{6F0D12B7-27C6-4BB5-8CE6-BE33217DBAE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
