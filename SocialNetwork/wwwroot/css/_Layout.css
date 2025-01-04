@@ -12,8 +12,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 3px 20px;
-    gap: 125px;
+    padding: 3px 30px;
+    gap: 10px;
     background-color: #181818
 }
 
@@ -43,10 +43,10 @@ footer .info p {
 }
 
 .logo {
-    margin-left: 10px;
-    width: 200px;
-    height: 50px;
-    color: white;
+    margin-left: 0px;
+    width: 11%;
+    height: auto;
+    min-width: 100px;
 }
 
 .menu {
@@ -57,8 +57,26 @@ footer .info p {
 .menu a {
     color: #ffce00;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 14px;
     font-family: 'Palatino Linotype';
+}
+
+@media (min-width: 768px) {
+    .menu a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu a {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu a {
+        font-size: 20px;
+    }
 }
 
 .menu a:hover {
@@ -69,5 +87,28 @@ footer .info p {
     content: '|';
     color: #ffffff;
     margin-left: 30px;
+}
+
+@media (max-width: 1024px) {
+    .menu a {
+        display: none;
+    }
+}
+
+.navbar {
+    display: none;
+}
+
+.menu-toggle {
+    border: none;
+    background: none;
+    padding: 0;
+    max-width: 30px;
+    display: inline-block;
+}
+
+.menu-toggle img {
+    width: 100%;
+    height: auto;
 }
 
