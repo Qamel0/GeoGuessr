@@ -10,19 +10,13 @@
 <body>
     <div class="wrapper">
     <header>
-        <button class="menu-toggle">
+        <button id="menu-toggle">
             <img src="~/svg/hamburger2.svg" alt="меню" />
         </button>
-        <nav class="navbar">
-            <ul class="barmenu">
-                <li><a>Одиночная игра</a></li>
-                <li><a>Мультиплеер</a></li>
-                <li><a>Статистика</a></li>
-                <li><a>Достижения</a></li>
-                <li><a>Магазин</a></li>
-                <li><a>Лучшие игроки</a></li>
-            </ul>
-        </nav>
+        
+
+        <script src="~/js/menu-toggle_button.js" defer></script>
+
         <img class="logo" src="~/images/logo.png" alt="главная страница" />
         <nav class="menu">
              <a>Одиночная игра</a>
@@ -35,9 +29,21 @@
         </nav>
     </header>
     <main>
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1641255610974!6m8!1m7!1sCAoSLEFGMVFpcE1IcWl5TzFwZzJMSzJrTV9nZzMyUlpxd0ctYmYwVWxZY0VlbHZv!2m2!1d42.3601!2d-71.0589!3f80!4f0!5f0.1"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        @RenderBody()
+            <nav class="navbar">
+                <ul class="barmenu">
+                    <li><a>Одиночная игра</a></li>
+                    <li><a>Мультиплеер</a></li>
+                    <li><a>Статистика</a></li>
+                    <li><a>Достижения</a></li>
+                    <li><a>Магазин</a></li>
+                    <li><a>Лучшие игроки</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1641255610974!6m8!1m7!1sCAoSLEFGMVFpcE1IcWl5TzFwZzJMSzJrTV9nZzMyUlpxd0ctYmYwVWxZY0VlbHZv!2m2!1d42.3601!2d-71.0589!3f80!4f0!5f0.1"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                @RenderBody()
+            </div>
     </main>
     <footer>
         <div class="info">

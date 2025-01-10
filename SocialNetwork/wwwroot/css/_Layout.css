@@ -29,6 +29,7 @@ body {
 }
 
 main {
+    display: flex;
     flex: 1;
     padding: 20px;
 }
@@ -75,9 +76,20 @@ footer .info p {
 
 .navbar {
     display: none;
+    width: 250px;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    overflow-y: auto;
+    flex-direction: column;
 }
 
-.menu-toggle {
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+#menu-toggle {
     border: none;
     background: none;
     padding: 0;
@@ -85,7 +97,7 @@ footer .info p {
     display: inline-block;
 }
 
-.menu-toggle img {
+#menu-toggle img {
     display: none;
     width: 80%;
     height: auto;
@@ -96,11 +108,11 @@ footer .info p {
         display: none;
     }
 
-    .menu-toggle {
+    #menu-toggle {
         display: block;
     }
 
-    .menu-toggle img {
+    #menu-toggle img {
         display: block;
     }
 }
