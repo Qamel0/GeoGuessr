@@ -6,18 +6,26 @@ a {
     color: #ffffff;
 }
 
-.gamestart{
+#gamestart {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    height: 5vw;
+    width: 23vw;
+    max-height: 65px;
+    max-width: 300px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
 }
 
-.gamestartimg{
-    height: 65px;
-    width: 300px;
-    border: 2px solid #000000;
-    border-radius: 20px;
+#gamestart img{
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -52,4 +60,30 @@ a {
 
 #introduction section ul li, ol li {
     margin-bottom: 10px;
+}
+
+#location {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blur-container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    width: 100vh;
+    position: relative;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
 }

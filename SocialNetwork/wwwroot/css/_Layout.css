@@ -15,6 +15,7 @@ header {
     padding: 3px 30px;
     gap: 10px;
     background-color: #181818; 
+    border-bottom: 1px solid #4d4d4d;
 }
 
 body {
@@ -31,11 +32,11 @@ body {
 main {
     display: flex;
     flex: 1;
-    padding: 20px;
 }
 
 footer {
     background-color: #181818;
+    border-top: 1px solid #4d4d4d;
     color: white
 }
 
@@ -76,8 +77,9 @@ footer .info p {
 
 .navbar {
     display: none;
-    width: 250px;
-    border-right: 1px solid #ddd;
+    width: 180px;
+    background-color: #181818;
+    border-right: 1px solid #4d4d4d;
     padding: 10px;
     overflow-y: auto;
     flex-direction: column;
